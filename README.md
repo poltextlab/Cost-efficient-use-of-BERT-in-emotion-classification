@@ -8,4 +8,12 @@ The input is needed in a tsv file, containing two necessary columns: "text" for 
 
 The code and approach is still under refinement. It was prepared to run in a GPU-supported CUDA environment, but another version is provided for easy usage in a free Google Colab GPU-supported notebook. Minor modifications might be needed to adapt to own directory and data structure.
 
+## Packages required:
+pandas
+torch
+transformers
+numpy
+json
+google.drive (optional)
+
 Written by György Márk Kis and Bálint Sass.
