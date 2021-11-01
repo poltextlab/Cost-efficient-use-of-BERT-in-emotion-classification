@@ -1,4 +1,4 @@
-# Cost-efficient-use-of-BERT-in-sentiment-classification
+# Cost efficient use of BERT in sentiment classification
 
 This code and approach was written and tested on a Hungarian media sentiment corpus, providing a novel (or at least not widely utilized) way of harnessing the power of the BERT language model without extensive resources manifesting in GPU or TPU usage and technical knowledge. It uses the Hubert hungarian pre-trained BERT-model, but utilizies classical ML instead of fine-tuning the model for a downstream classification task. Our approach is not yet pretrained, but will be as soon as a proper corpus becomes available - and hopefully won't need training datasets for future users.
 
