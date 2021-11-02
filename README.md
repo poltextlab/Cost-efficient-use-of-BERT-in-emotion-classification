@@ -11,4 +11,8 @@ The code and approach is still under refinement. It was prepared to run in a GPU
 ## Packages required:
 pandas, torch, transformers, numpy, json, google.drive (optional)
 
+## Parameters best practice
+
+
+
 Written by György Márk Kis and Bálint Sass.
