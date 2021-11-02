@@ -12,7 +12,10 @@ The code and approach is still under refinement. It was prepared to run in a GPU
 pandas, torch, transformers, numpy, json, google.drive (optional)
 
 ## Parameters best practice
-
+1. Mean pooling is thought to be the most effective option for extracting contextual embeddings from hidden layers, but this is not a definitive conclusion.
+2. Even though there are at least 768 variables for the LR model, the default L2-regularization of sklearn seems to properly take care of this. Previously several dimension reduction techniques were applied and experimented with but none helped with the classification.
+3. When using grid search for the LR-model, so far a high number of iterations (such as 8000), liblinear solver with L2-regularization, and a relatively narrow band of possible tolerance and C-values (at most 10x change between lower and upper limits) were found to be the most effective.
+4. Even though k = 3 is the default for the cross validation in the script, it can be increased to 5. Further than that possibly increases computing requirements tremendously while not providing notable improvements. The CV-loop runs for 3 times by default, this can be changed. As values do not seem to vary much, anything above 9 runs seems unnecessary.
 
 
 Written by György Márk Kis and Bálint Sass.
