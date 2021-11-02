@@ -136,16 +136,24 @@ for i in range(3):
     clasrep.append(classifrep)
     paramlist.append(lrmodel.best_params_)
     print("Finished with run!")
-    
+
+keylist = list(clasrep[0].keys())
+results = pd.DataFrame()
+
+for i in range(0,len(param)):
+    results = results.append(pd.DataFrame.from_dict(param[i], orient = 'index').transpose(), ignore_index = True)
+
+results.mean()
+
 import json
 
-MyFile = open('clasrep_bert_three.json', 'w')
+MyFile = open('clasrep_bert.json', 'w')
 json.dump(clasrep, MyFile)
 MyFile.close()
 
-MyFile = open('param_bert_three.json', 'w')
+MyFile = open('param_bert.json', 'w')
 json.dump(paramlist, MyFile)
 MyFile.close()
 
-!cp clasrep_bert_three.json "/content/gdrive/My Drive/"
-!cp param_bert_three.json "/content/gdrive/My Drive/"
+!cp clasrep_bert.json "/content/gdrive/My Drive/"
+!cp param_bert.json "/content/gdrive/My Drive/"
