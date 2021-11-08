@@ -55,7 +55,7 @@ The approach was benchmarked against embeddings from a non fine-tuned XLM-Robert
 ## Usage
 The input is needed in a tsv file, containing two necessary columns: "text" for the text itself, and "topik" for the numeric category labels. The code provides a JSON file for the results compiled in a dictionary, and another one for the optimized parameters.
 
-The code and approach are still under refinement. It was prepared to run in a GPU-supported CUDA environment, but another (classless) version is provided for easy usage and debugging in a free Google Colab GPU-supported notebook. Minor modifications might be needed to adapt to own directory and data structure.
+The code and approach are still under refinement. It was prepared to run in a GPU-supported CUDA environment. A notebook version is provided for easy usage and debugging in a free Google Colab GPU-supported notebook. Minor modifications might be needed to adapt to own directory and data structure.
 
 ## Packages required:
 pandas, torch, transformers, numpy, json, sklearn, google.drive (optional)
