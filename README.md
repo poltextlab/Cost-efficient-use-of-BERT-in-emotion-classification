@@ -2,6 +2,9 @@
 
 This code and approach was written and tested on a Hungarian media sentiment corpus, providing a novel (or at least not widely utilized) way of harnessing the power of the BERT language model without extensive resources manifesting in GPU or TPU usage and technical knowledge. It uses the Hubert hungarian pre-trained BERT-model, but utilizies classical ML instead of fine-tuning the model for a downstream classification task. Our approach is not yet pretrained, but will be as soon as a proper corpus becomes available - and hopefully won't need training datasets for future users.
 
+## Method
+Instead of fine tuning a BERT model, we extract contextual embeddings from the hidden layers and use those as classical inputs for ML-approaches.
+
 ## Results
 The code was benchmarked against a fine-tuned XLM-Roberta on the same corpus, and reached the following topline results (Roberta result in brackets): 8-way sentiment classification weighted F1: 0.65 [0.73], with a range of category-level F1s of 0.35-0.72 [0.51-0.79]; 3-way classification weighted F1: 0.77 [0.82], 0.58-0.82 [0.51-0.87]. The code was run in a Google Colab GPU-supported free notebook.
 
