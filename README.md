@@ -55,7 +55,7 @@ The approach was benchmarked against embeddings from a non fine-tuned XLM-Robert
 ## Usage
 The input is needed in a tsv file, containing two necessary columns: "text" for the text itself, and "topik" for the numeric category labels. The code provides a JSON file for the results compiled in a dictionary, and another one for the optimized parameters.
 
-The code and approach are still under refinement. It was prepared to run in a GPU-supported CUDA environment. A notebook version is provided for easy usage and debugging in a free Google Colab GPU-supported notebook. Minor modifications might be needed to adapt to own directory and data structure.
+*The code and approach are still under refinement.* It was prepared to run in a GPU-supported CUDA environment. A notebook version is provided for easy usage and debugging in a free Google Colab GPU-supported notebook. Minor modifications might be needed to adapt to own directory and data structure.
 
 ## Packages required:
 pandas, torch, transformers, numpy, json, sklearn, google.drive (optional)
@@ -67,4 +67,4 @@ pandas, torch, transformers, numpy, json, sklearn, google.drive (optional)
 4. Even though k = 3 is the default for the cross-validation in the script, it can be increased to 5. Further than that possibly increases computing requirements tremendously while not providing notable improvements. The CV-loop runs 3 times by default, this can be changed. As values do not seem to vary much, anything above 9 runs seems unnecessary.
 
 
-Written by György Márk Kis. Thank you for the contributions and support from SZTAKI, MTA TK MILAB and Bálint Sass.
+Written by György Márk Kis. Thank you for the contributions and support from MTA TK MILAB, SZTAKI, and Bálint Sass.
