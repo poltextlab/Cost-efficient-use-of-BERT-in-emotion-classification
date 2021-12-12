@@ -1,4 +1,4 @@
-# A novel cost-efficient use of BERT in 8-way emotion classification on a Hungarian media corpus
+# A novel cost-efficient use of BERT embeddings in 8-way emotion classification on a Hungarian media corpus
 
 This code and approach was written and tested on a Hungarian media sentiment corpus, providing a novel (or at least not widely utilized) way of harnessing the power of the BERT language model without extensive resources manifesting in GPU or TPU usage and technical knowledge. It uses the Hubert Hungarian pre-trained BERT-model, but utilizes classical ML instead of fine-tuning the model for a downstream classification task. Our approach is not yet pretrained, but will be as soon as a proper corpus becomes available - and hopefully won't need training datasets for future users.
 
