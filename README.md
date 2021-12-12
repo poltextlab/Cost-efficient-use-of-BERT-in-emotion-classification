@@ -9,50 +9,50 @@ Instead of fine-tuning a BERT model, we extract contextual embeddings from the h
 The approach was benchmarked against embeddings from a non fine-tuned XLM-Roberta, Hilbert, fine-tuned XLM-Roberta and fine-tuned Hubert on the same corpus, and reached the following topline results (Roberta result in brackets): 8-way sentiment classification weighted F1: 0.65 [0.73], with a range of category-level F1s of 0.35-0.72 [0.51-0.79]; 3-way classification weighted F1: 0.77 [0.82], 0.58-0.82 [0.51-0.87]. The code was run in a Google Colab GPU-supported free notebook.
 
 
-![image](https://user-images.githubusercontent.com/23291101/144218577-a1128ad4-5e4f-4bf4-ba17-995c50f69fcb.png)
+![image](https://user-images.githubusercontent.com/23291101/145717215-ad3a83c1-6db1-44ff-aca5-aa6eaa3c9ffb.png)
 
 
 ### Topline results
-|                  |     Roberta    |     Hilbert    |     Hubert    |     Roberta Fine Tuned    |      Hubert Fine Tuned     |
-|:----------------:|:--------------:|:--------------:|:-------------:|:-------------------------:|:--------------------------:|
-|     Global F1    |       0.44     |       0.6      |      0.65     |            0.73           |             0.71           |
+|                  |     Hubert    |     Roberta Fine Tuned    |      Hubert Fine Tuned     |
+|:----------------:|:-------------:|:-------------------------:|:--------------------------:|
+|     Global F1    |      0.61     |            0.73           |             0.71           |
 
 
 ### Weighted F1-scores
-|                   |     Roberta    |     Hilbert    |     Hubert    |     Roberta Fine Tuned    |      Hubert Fine Tuned     |
-|-------------------|:--------------:|:--------------:|:-------------:|:-------------------------:|:--------------------------:|
-|     Anger         |       0.37     |       0.61     |      0.65     |            0.74           |             0.69           |
-|     Disgust       |       0.47     |       0.62     |      0.64     |            0.75           |             0.72           |
-|     Fear          |       0.14     |       0.29     |      0.35     |            0.71           |             0.50           |
-|     Happiness     |       0.35     |       0.47     |      0.53     |            0.67           |             0.45           |
-|     Neutral       |       0.40     |       0.56     |      0.58     |            0.51           |             0.59           |
-|     Sad           |       0.38     |       0.57     |      0.66     |            0.73           |             0.74           |
-|     Successful    |       0.52     |       0.65     |      0.72     |            0.79           |             0.77           |
-|     Trustful      |       0.49     |       0.65     |      0.67     |            0.74           |             0.74           |
+|                   |     Hubert    |     Roberta Fine Tuned    |      Hubert Fine Tuned     |
+|-------------------|:-------------:|:-------------------------:|:--------------------------:|
+|     Anger         |      0.58     |            0.74           |             0.69           |
+|     Disgust       |      0.60     |            0.75           |             0.72           |
+|     Fear          |      0.25     |            0.71           |             0.50           |
+|     Happiness     |      0.36     |            0.67           |             0.45           |
+|     Neutral       |      0.50     |            0.51           |             0.59           |
+|     Sad           |      0.61     |            0.73           |             0.74           |
+|     Successful    |      0.69     |            0.79           |             0.77           |
+|     Trustful      |      0.66     |            0.74           |             0.74           |
 
 ### Precision
-|                   |     Roberta    |     Hilbert    |     Hubert    |     Roberta Fine Tuned    |      Hubert Fine Tuned     |
-|-------------------|:--------------:|:--------------:|:-------------:|:-------------------------:|:--------------------------:|
-|     Anger         |      0.33      |      0.55      |      0.59     |            0.76           |             0.73           |
-|     Disgust       |      0.48      |      0.62      |      0.64     |            0.72           |             0.77           |
-|     Fear          |      0.11      |      0.25      |      0.32     |            0.72           |             0.46           |
-|     Happiness     |      0.28      |      0.39      |      0.44     |            0.75           |             0.67           |
-|     Neutral       |      0.42      |      0.55      |      0.59     |            0.50           |             0.57           |
-|     Sad           |      0.43      |      0.62      |      0.67     |            0.73           |             0.71           |
-|     Successful    |      0.57      |      0.70      |      0.77     |            0.80           |             0.73           |
-|     Trustful      |      0.44      |      0.62      |      0.66     |            0.78           |             0.80           |
+|                   |     Hubert    |     Roberta Fine Tuned    |      Hubert Fine Tuned     |
+|-------------------|:-------------:|:-------------------------:|:--------------------------:|
+|     Anger         |      0.54     |            0.76           |             0.73           |
+|     Disgust       |      0.62     |            0.72           |             0.77           |
+|     Fear          |      0.21     |            0.72           |             0.46           |
+|     Happiness     |      0.28     |            0.75           |             0.67           |
+|     Neutral       |      0.49     |            0.50           |             0.57           |
+|     Sad           |      0.63     |            0.73           |             0.71           |
+|     Successful    |      0.73     |            0.80           |             0.73           |
+|     Trustful      |      0.63     |            0.78           |             0.80           |
 
 ### Recall
-|                   |     Roberta    |     Hilbert    |     Hubert    |     Roberta Fine Tuned    |      Hubert Fine Tuned     |
-|-------------------|:--------------:|:--------------:|:-------------:|:-------------------------:|:--------------------------:|
-|     Anger         |      0.43      |      0.69      |      0.72     |            0.71           |             0.66           |
-|     Disgust       |      0.47      |      0.62      |      0.64     |            0.79           |             0.67           |
-|     Fear          |      0.23      |      0.36      |      0.39     |            0.70           |             0.54           |
-|     Happiness     |      0.49      |      0.59      |      0.65     |            0.60           |             0.34           |
-|     Neutral       |      0.38      |      0.56      |      0.57     |            0.53           |             0.60           |
-|     Sad           |      0.35      |      0.54      |      0.65     |            0.72           |             0.78           |
-|     Successful    |      0.48      |      0.61      |      0.69     |            0.77           |             0.81           |
-|     Trustful      |      0.55      |      0.68      |      0.69     |            0.71           |             0.68           |
+|                   |     Hubert    |     Roberta Fine Tuned    |      Hubert Fine Tuned     |
+|-------------------|:-------------:|:-------------------------:|:--------------------------:|
+|     Anger         |      0.64     |            0.71           |             0.66           |
+|     Disgust       |      0.58     |            0.79           |             0.67           |
+|     Fear          |      0.33     |            0.70           |             0.54           |
+|     Happiness     |      0.51     |            0.60           |             0.34           |
+|     Neutral       |      0.52     |            0.53           |             0.60           |
+|     Sad           |      0.59     |            0.72           |             0.78           |
+|     Successful    |      0.66     |            0.77           |             0.81           |
+|     Trustful      |      0.69     |            0.71           |             0.68           |
 
 ## Usage
 The input is needed in a tsv file, containing two necessary columns: "text" for the text itself, and "topik" for the numeric category labels. The code provides a JSON file for the results compiled in a dictionary, and another one for the optimized parameters.
