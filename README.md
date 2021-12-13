@@ -6,7 +6,7 @@ This code and approach was written and tested on a Hungarian media sentiment cor
 Instead of fine-tuning a BERT model, we extract contextual embeddings from the hidden layers and use those as classical inputs for ML approaches.
 
 ## Results
-The approach was benchmarked against embeddings from a non fine-tuned XLM-Roberta, Hilbert, fine-tuned XLM-Roberta and fine-tuned Hubert on the same corpus, and reached the following topline results (Roberta result in brackets): 8-way sentiment classification weighted F1: 0.62 [0.73], with a range of category-level F1s of 0.25-0.71 [0.51-0.79]. The code was run in a Google Colab GPU-supported free notebook.
+The approach was benchmarked against a fine-tuned XLM-Roberta and a fine-tuned Hubert on the same corpus, and reached the following topline results (best Roberta result in brackets): 8-way sentiment classification weighted F1: 0.62 [0.73], with a range of category-level F1s of 0.25-0.71 [0.51-0.79]. The code was run in a Google Colab GPU-supported free notebook.
 
 
 ![image](https://user-images.githubusercontent.com/23291101/145797730-2cd0a4bf-f730-4000-9bb0-c4d053a9438b.png)
