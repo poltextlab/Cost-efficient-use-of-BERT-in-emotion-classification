@@ -70,5 +70,6 @@ pandas, torch, transformers, numpy, json, sklearn, google.drive (optional)
 
 György Márk Kis, Orsolya Ring, Miklós Sebők: A Novel Cost-efficient Use of BERT Embeddings in 8-way Emotion Classification on a Hungarian Media Corpus (Under review)
 
+The research was supported by the Ministry of Innovation and Technology NRDI Office within the framework of the Artificial Intelligence National Laboratory Program
 
 Thank you for the contributions and support from MTA TK MILAB, SZTAKI, and Bálint Sass.
