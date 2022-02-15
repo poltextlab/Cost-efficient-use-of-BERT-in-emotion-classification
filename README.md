@@ -68,5 +68,7 @@ pandas, torch, transformers, numpy, json, sklearn, google.drive (optional)
 3. When using grid search for the LR-model, so far a high number of iterations (such as 6-8000), liblinear solver with L2-regularization, and a relatively narrow band of possible tolerance and C-values (at most 10x change between lower and upper limits) were found to be the most effective.
 4. Even though k = 3 is the default for the cross-validation in the script, it can be increased to 5. Further than that possibly increases computing requirements tremendously while not providing notable improvements. The CV-loop runs 3 times by default, this can be changed. As values do not seem to vary much, anything above 9 runs seems unnecessary.
 
+György Márk Kis, Orsolya Ring, Miklós Sebők: A Novel Cost-efficient Use of BERT Embeddings in 8-way Emotion Classification on a Hungarian Media Corpus (Under review)
 
-Written by György Márk Kis. Thank you for the contributions and support from MTA TK MILAB, SZTAKI, and Bálint Sass.
+
+Thank you for the contributions and support from MTA TK MILAB, SZTAKI, and Bálint Sass.
